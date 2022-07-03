@@ -1,0 +1,39 @@
+[package]
+name = "mugle_integration"
+version = "1.1.0"
+authors = ["Mugle Developers <mimblewimble@lists.launchpad.net>"]
+description = "Simple, private and scalable cryptocurrency implementation based on the MimbleWimble chain format."
+license = "Apache-2.0"
+repository = "https://github.com/mugleproject/mugle"
+keywords = [ "crypto", "mugle", "mimblewimble" ]
+workspace = ".."
+edition = "2018"
+
+[dependencies]
+hyper = "0.12"
+futures = "0.1"
+http = "0.1"
+itertools = "0.7"
+rand = "0.5"
+serde = "1"
+log = "0.4"
+serde_derive = "1"
+serde_json = "1"
+chrono = "0.4.4"
+tokio =  "0.1.11"
+blake2-rfc = "0.2"
+bufstream = "0.1"
+
+#mugle_apiwallet = { path = "../apiwallet", version = "1.1.0" }
+#mugle_libwallet = { path = "../libwallet", version = "1.1.0" }
+#mugle_refwallet = { path = "../refwallet", version = "1.1.0" }
+#mugle_wallet_config = { path = "../config", version = "1.1.0" }
+
+#mugle_core = { git = "https://github.com/mugleproject/mugle", branch = "milestone/1.1.0" }
+#mugle_keychain = { git = "https://github.com/mugleproject/mugle", branch = "milestone/1.1.0" }
+#mugle_chain = { git = "https://github.com/mugleproject/mugle", branch = "milestone/1.1.0" }
+#mugle_util = { git = "https://github.com/mugleproject/mugle", branch = "milestone/1.1.0" }
+#mugle_api = { git = "https://github.com/mugleproject/mugle", branch = "milestone/1.1.0" }
+#mugle_store = { git = "https://github.com/mugleproject/mugle", branch = "milestone/1.1.0" }
+#mugle_p2p = { git = "https://github.com/mugleproject/mugle", branch = "milestone/1.1.0" }
+#mugle_servers = { git = "https://github.com/mugleproject/mugle", branch = "milestone/1.1.0" }

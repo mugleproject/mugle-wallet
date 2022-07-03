@@ -1,0 +1,54 @@
+[package]
+name = "mugle_wallet_util"
+version = "5.1.0"
+authors = ["Mugle Developers <mimblewimble@lists.launchpad.net>"]
+description = "Util, for generic utilities and to re-export mugle crates"
+license = "Apache-2.0"
+repository = "https://github.com/mugleproject/mugle-wallet"
+keywords = [ "crypto", "mugle", "mimblewimble" ]
+workspace = ".."
+edition = "2018"
+
+[dependencies]
+rand = "0.6"
+serde = "1"
+serde_derive = "1"
+ed25519-dalek = "1.0.0-pre.4"
+data-encoding = "2"
+sha3 = "0.8"
+
+# For Release
+mugle_core = "5.1.2-alpha.1"
+mugle_keychain = "5.1.2-alpha.1"
+mugle_chain = "5.1.2-alpha.1"
+mugle_util = "5.1.2-alpha.1"
+mugle_api = "5.1.2-alpha.1"
+mugle_store = "5.1.2-alpha.1"
+
+# For beta release
+
+# mugle_core = { git = "https://github.com/mugleproject/mugle", tag = "v5.0.0-beta.2"}
+# mugle_keychain = { git = "https://github.com/mugleproject/mugle", tag = "v5.0.0-beta.2" }
+# mugle_chain = { git = "https://github.com/mugleproject/mugle", tag = "v5.0.0-beta.2" }
+# mugle_util = { git = "https://github.com/mugleproject/mugle", tag = "v5.0.0-beta.2" }
+# mugle_api = { git = "https://github.com/mugleproject/mugle", tag = "v5.0.0-beta.2" }
+# mugle_store = { git = "https://github.com/mugleproject/mugle", tag = "v5.0.0-beta.2" }
+
+# For bleeding edge
+# mugle_core = { git = "https://github.com/mugleproject/mugle", branch = "master" }
+# mugle_keychain = { git = "https://github.com/mugleproject/mugle", branch = "master" }
+# mugle_chain = { git = "https://github.com/mugleproject/mugle", branch = "master" }
+# mugle_util = { git = "https://github.com/mugleproject/mugle", branch = "master" }
+# mugle_api = { git = "https://github.com/mugleproject/mugle", branch = "master" }
+# mugle_store = { git = "https://github.com/mugleproject/mugle", branch = "master" }
+
+# For local testing
+# mugle_core = { path = "../../mugle/core"}
+# mugle_keychain = { path = "../../mugle/keychain"}
+# mugle_chain = { path = "../../mugle/chain"}
+# mugle_util = { path = "../../mugle/util"}
+# mugle_api = { path = "../../mugle/api"}
+# mugle_store = { path = "../../mugle/store"}
+
+[dev-dependencies]
+pretty_assertions = "0.6"
