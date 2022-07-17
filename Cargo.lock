@@ -2165,7 +2165,7 @@ dependencies = [
 
 [[package]]
 name = "mugle_wallet"
-version = "5.1.0"
+version = "5.1.0-alpha.1"
 dependencies = [
  "built",
  "clap",
@@ -2194,7 +2194,7 @@ dependencies = [
 
 [[package]]
 name = "mugle_wallet_api"
-version = "5.1.0"
+version = "5.1.0-alpha.1"
 dependencies = [
  "base64 0.12.3",
  "chrono",
@@ -2218,7 +2218,7 @@ dependencies = [
 
 [[package]]
 name = "mugle_wallet_config"
-version = "5.1.0"
+version = "5.1.0-alpha.1"
 dependencies = [
  "dirs 2.0.2",
  "mugle_wallet_util",
@@ -2231,7 +2231,7 @@ dependencies = [
 
 [[package]]
 name = "mugle_wallet_controller"
-version = "5.1.0"
+version = "5.1.0-alpha.1"
 dependencies = [
  "chrono",
  "easy-jsonrpc-mw",
@@ -2262,7 +2262,7 @@ dependencies = [
 
 [[package]]
 name = "mugle_wallet_impls"
-version = "5.1.0"
+version = "5.1.0-alpha.1"
 dependencies = [
  "base64 0.12.3",
  "blake2-rfc",
@@ -2296,7 +2296,7 @@ dependencies = [
 
 [[package]]
 name = "mugle_wallet_libwallet"
-version = "5.1.0"
+version = "5.1.0-alpha.1"
 dependencies = [
  "age",
  "base64 0.9.3",
@@ -2328,7 +2328,7 @@ dependencies = [
 
 [[package]]
 name = "mugle_wallet_util"
-version = "5.1.0"
+version = "5.1.0-alpha.1"
 dependencies = [
  "data-encoding",
  "ed25519-dalek",
