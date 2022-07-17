@@ -18,12 +18,12 @@ data-encoding = "2"
 sha3 = "0.8"
 
 # For Release
-mugle_core = "5.1.2-alpha.1"
-mugle_keychain = "5.1.2-alpha.1"
-mugle_chain = "5.1.2-alpha.1"
-mugle_util = "5.1.2-alpha.1"
-mugle_api = "5.1.2-alpha.1"
-mugle_store = "5.1.2-alpha.1"
+mugle_core = "5.1.2-alpha.2"
+mugle_keychain = "5.1.2-alpha.2"
+mugle_chain = "5.1.2-alpha.2"
+mugle_util = "5.1.2-alpha.2"
+mugle_api = "5.1.2-alpha.2"
+mugle_store = "5.1.2-alpha.2"
 
 # For beta release
 
