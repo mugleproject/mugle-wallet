@@ -55,7 +55,7 @@ fn owner_v3_init_secure() -> Result<(), mugle_wallet_controller::Error> {
 		test_framework::award_blocks_to_wallet(&chain, wallet1.clone(), mask1, bh as usize, false);
 
 	// run a wallet owner listener
-	let arg_vec = vec!["mugle-wallet", "-p", "password", "owner_api", "-l", "33420"];
+	let arg_vec = vec!["mugle-wallet", "-p", "password", "owner_api", "-l", "36820"];
 	thread::spawn(move || {
 		let yml = load_yaml!("../src/bin/mugle-wallet.yml");
 		let app = App::from_yaml(yml);
@@ -79,7 +79,7 @@ fn owner_v3_init_secure() -> Result<(), mugle_wallet_controller::Error> {
 	let res = send_request_enc::<String>(
 		&JsonId::IntId(1),
 		1,
-		"http://127.0.0.1:33420/v3/owner",
+		"http://127.0.0.1:36820/v3/owner",
 		&req,
 		&sec_key,
 	)?;
@@ -88,14 +88,14 @@ fn owner_v3_init_secure() -> Result<(), mugle_wallet_controller::Error> {
 	assert_eq!(res.unwrap_err().code, -32001);
 
 	// 2) Call any function on the V3 api without calling 'init_secure_api` first
-	let res = send_request::<String>(1, "http://127.0.0.1:33420/v3/owner", &req)?;
+	let res = send_request::<String>(1, "http://127.0.0.1:36820/v3/owner", &req)?;
 	println!("RES 2: {:?}", res);
 	assert!(res.is_err());
 	assert_eq!(res.unwrap_err().code, -32001);
 
 	// 3) Call 'init_secure_api' and negotiate shared key
 	let req = include_str!("data/v3_reqs/init_secure_api.req.json");
-	let res = send_request(1, "http://127.0.0.1:33420/v3/owner", req)?;
+	let res = send_request(1, "http://127.0.0.1:36820/v3/owner", req)?;
 	println!("RES 3: {:?}", res);
 
 	assert!(res.is_ok());
@@ -107,7 +107,7 @@ fn owner_v3_init_secure() -> Result<(), mugle_wallet_controller::Error> {
 	let res = send_request_enc::<RetrieveSummaryInfoResp>(
 		&JsonId::StrId(String::from("1")),
 		1,
-		"http://127.0.0.1:33420/v3/owner",
+		"http://127.0.0.1:36820/v3/owner",
 		&req,
 		&shared_key,
 	)?;
@@ -121,7 +121,7 @@ fn owner_v3_init_secure() -> Result<(), mugle_wallet_controller::Error> {
 	let res = send_request_enc::<RetrieveSummaryInfoResp>(
 		&JsonId::StrId(String::from("1")),
 		1,
-		"http://127.0.0.1:33420/v3/owner",
+		"http://127.0.0.1:36820/v3/owner",
 		&req,
 		&bad_key,
 	)?;
@@ -138,7 +138,7 @@ fn owner_v3_init_secure() -> Result<(), mugle_wallet_controller::Error> {
 			"body_enc:": "thisiswrong",
 		}
 	});
-	let res = send_request::<String>(1, "http://127.0.0.1:33420/v3/owner", &req.to_string())?;
+	let res = send_request::<String>(1, "http://127.0.0.1:36820/v3/owner", &req.to_string())?;
 	println!("RES 6: {:?}", res);
 	assert!(res.is_err());
 	assert_eq!(res.unwrap_err().code, -32002);
@@ -153,7 +153,7 @@ fn owner_v3_init_secure() -> Result<(), mugle_wallet_controller::Error> {
 			"body_enc": "thisiswrong",
 		}
 	});
-	let res = send_request::<String>(1, "http://127.0.0.1:33420/v3/owner", &req.to_string())?;
+	let res = send_request::<String>(1, "http://127.0.0.1:36820/v3/owner", &req.to_string())?;
 	println!("RES 7: {:?}", res);
 	assert!(res.is_err());
 	assert_eq!(res.unwrap_err().code, -32002);
@@ -163,7 +163,7 @@ fn owner_v3_init_secure() -> Result<(), mugle_wallet_controller::Error> {
 	let res = send_request_enc(
 		&JsonId::StrId(String::from("1")),
 		1,
-		"http://127.0.0.1:33420/v3/owner",
+		"http://127.0.0.1:36820/v3/owner",
 		&req.to_string(),
 		&shared_key,
 	)?;
@@ -177,7 +177,7 @@ fn owner_v3_init_secure() -> Result<(), mugle_wallet_controller::Error> {
 	let res = send_request_enc::<RetrieveSummaryInfoResp>(
 		&JsonId::StrId(String::from("1")),
 		1,
-		"http://127.0.0.1:33420/v3/owner",
+		"http://127.0.0.1:36820/v3/owner",
 		&req,
 		&shared_key,
 	)?;
@@ -186,7 +186,7 @@ fn owner_v3_init_secure() -> Result<(), mugle_wallet_controller::Error> {
 
 	// 10) Call 'init_secure_api' unencrypted (which we can do) and negotiate new shared key
 	let req = include_str!("data/v3_reqs/init_secure_api.req.json");
-	let res = send_request(1, "http://127.0.0.1:33420/v3/owner", req)?;
+	let res = send_request(1, "http://127.0.0.1:36820/v3/owner", req)?;
 	println!("RES 10: {:?}", res);
 
 	assert!(res.is_ok());
@@ -198,7 +198,7 @@ fn owner_v3_init_secure() -> Result<(), mugle_wallet_controller::Error> {
 	let res = send_request_enc::<RetrieveSummaryInfoResp>(
 		&JsonId::StrId(String::from("1")),
 		1,
-		"http://127.0.0.1:33420/v3/owner",
+		"http://127.0.0.1:36820/v3/owner",
 		&req,
 		&shared_key,
 	)?;
@@ -218,7 +218,7 @@ fn owner_v3_init_secure() -> Result<(), mugle_wallet_controller::Error> {
 	let res = send_request_enc::<String>(
 		&JsonId::IntId(12),
 		1,
-		"http://127.0.0.1:33420/v3/owner",
+		"http://127.0.0.1:36820/v3/owner",
 		&req,
 		&shared_key,
 	)?;
@@ -231,7 +231,7 @@ fn owner_v3_init_secure() -> Result<(), mugle_wallet_controller::Error> {
 	let res = send_request_enc::<String>(
 		&JsonId::StrId(String::from("13")),
 		1,
-		"http://127.0.0.1:33420/v3/owner",
+		"http://127.0.0.1:36820/v3/owner",
 		&req,
 		&shared_key,
 	)?;

@@ -8,7 +8,7 @@
 const jayson = require('jayson/promise');
 const crypto = require('crypto');
 
-const client = jayson.client.http('http://localhost:3420/v3/owner');
+const client = jayson.client.http('http://localhost:6820/v3/owner');
 
 // Demo implementation of using `aes-256-gcm` with node.js's `crypto` lib.
 const aes256gcm = (shared_secret) => {

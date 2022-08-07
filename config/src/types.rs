@@ -87,7 +87,7 @@ impl WalletConfig {
 
 	/// Default listener port
 	pub fn default_owner_api_listen_port() -> u16 {
-		3420
+		6820
 	}
 
 	/// Default listener port
@@ -186,7 +186,7 @@ impl Default for TorConfig {
 		TorConfig {
 			skip_send_attempt: Some(false),
 			use_tor_listener: true,
-			socks_proxy_addr: "127.0.0.1:59050".to_owned(),
+			socks_proxy_addr: "127.0.0.1:48060".to_owned(),
 			send_config_dir: ".".into(),
 			bridge: TorBridgeConfig::default(),
 			proxy: TorProxyConfig::default(),

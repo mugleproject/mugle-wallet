@@ -15,7 +15,7 @@ This sample doesn't use the authentication specified in the wallet's `.api_secre
 ensure the client url in `src\index.js` is set correctly:
 
 ```.sh
-const client = jayson.client.http('http://localhost:3420/v3/owner');
+const client = jayson.client.http('http://localhost:6820/v3/owner');
 ```
 
 Then (assuming node.js and npm are installed on the system):

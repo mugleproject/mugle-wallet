@@ -114,7 +114,7 @@ impl Default for LocalServerContainerConfig {
 			api_server_port: 16813,
 			p2p_server_port: 16814,
 			wallet_port: 16815,
-			owner_port: 13420,
+			owner_port: 16820,
 			owner_api_include_foreign: false,
 			seed_addr: String::from(""),
 			is_seeding: false,

@@ -73,7 +73,7 @@ macro_rules! setup_proxy {
 		// add wallet to proxy
 		let config1 = initial_setup_wallet($test_dir, "wallet1");
 		let wallet_config1 = config1.clone().members.unwrap().wallet;
-		//config1.owner_api_listen_port = Some(13420);
+		//config1.owner_api_listen_port = Some(16820);
 		let ($wallet1, mask1_i) = instantiate_wallet(
 			wallet_config1.clone(),
 			$client1.clone(),

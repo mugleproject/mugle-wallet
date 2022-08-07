@@ -1155,7 +1155,7 @@ pub trait OwnerRpc {
 				"chain_type": null,
 				"api_listen_interface": "127.0.0.1",
 				"api_listen_port": 6815,
-				"owner_api_listen_port": 3420,
+				"owner_api_listen_port": 6820,
 				"api_secret_path": null,
 				"node_api_secret_path": null,
 				"check_node_api_http_addr": "http://127.0.0.1:6813",
@@ -1812,7 +1812,7 @@ pub trait OwnerRpc {
 		"params": {
 			"tor_config": {
 				"use_tor_listener": true,
-				"socks_proxy_addr": "127.0.0.1:59050",
+				"socks_proxy_addr": "127.0.0.1:48060",
 				"send_config_dir": "."
 			}
 		},
