@@ -92,7 +92,7 @@ impl WalletConfig {
 
 	/// Default listener port
 	pub fn default_accept_fee_base() -> u64 {
-		500_000
+		500
 	}
 
 	/// Use value from config file, defaulting to sensible value if missing.
